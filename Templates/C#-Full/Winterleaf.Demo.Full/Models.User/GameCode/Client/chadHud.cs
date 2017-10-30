@@ -87,7 +87,7 @@ namespace WinterLeaf.Demo.Full.Models.User.GameCode.Client
 
             int chatPosition = Util.getWord(console.GetVarString(string.Format("{0}.extent", this)), 1).AsInt() - chatScrollHeight + Util.getWord(console.GetVarString(string.Format("{0}.position", this)), 1).AsInt() - console.GetVarInt(string.Format("{0}.profile.borderThickness", scrollBox));
 
-            int linesToScroll = (int) Math.Floor(((chatPosition)/((double) textHeight) + .5));
+            int linesToScroll = (int) Math.Floor((float)(chatPosition / textHeight) + .5f);
 
             string origPosition = "";
             if (linesToScroll > 0)
